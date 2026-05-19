@@ -33,6 +33,7 @@
     "vue-tsc": "^2.2.8"
   },
   "scripts": {
+    "prepare": "npm run build",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "typecheck": "vue-tsc --noEmit",
