@@ -1,0 +1,30 @@
+/* Welcome landing chrome from messenger-design mockup */
+
+.welcome-shell{
+  height:100dvh;min-height:0;display:flex;flex-direction:column;background:var(--bg);overflow-y:auto;
+}
+.w-nav{
+  display:flex;align-items:center;gap:14px;padding:20px 40px;border-bottom:1px solid var(--line);
+}
+.w-nav .links{display:flex;gap:24px;font-size:14px;color:var(--text-dim)}
+.w-nav .links a:hover{color:var(--text)}
+.w-hero{
+  padding:80px 40px 60px;max-width:1200px;margin:0 auto;width:100%;text-align:center;
+}
+.w-hero h1{font-size:56px;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0 0 18px;
+  background:linear-gradient(135deg,#fff 30%,#c7baff);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.w-hero p{font-size:18px;color:var(--text-dim);max-width:620px;margin:0 auto 32px;line-height:1.6}
+.w-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;padding:0 40px 60px;max-width:1200px;margin:0 auto;width:100%}
+.w-feat{padding:24px;background:var(--bg-1);border:1px solid var(--line);border-radius:14px}
+.w-feat .fi{width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:#c7baff;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.w-feat h3{margin:0 0 6px;font-size:16px}
+.w-feat p{margin:0;font-size:14px;color:var(--text-dim);line-height:1.5}
+.w-foot{padding:24px 40px;border-top:1px solid var(--line);color:var(--text-mute);font-size:13px;text-align:center}
+
+@media (max-width: 900px){
+  .w-hero h1{font-size:36px}
+  .w-hero{padding:40px 20px}
+  .w-grid{padding:0 20px 40px}
+  .w-nav{padding:16px 20px}
+}

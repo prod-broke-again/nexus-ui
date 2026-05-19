@@ -1,0 +1,60 @@
+/* Molecule chrome extracted from messenger-design mockup (.folder-tab, .chat-row, .setting-row, .msg…) */
+
+.folder-tab{
+  padding:10px 12px;font-size:13px;color:var(--text-dim);font-weight:500;
+  border-bottom:2px solid transparent;display:flex;align-items:center;gap:6px;white-space:nowrap;
+  transition:var(--t);
+}
+.folder-tab:hover{color:var(--text)}
+.folder-tab.is-active{color:var(--text);border-bottom-color:var(--accent)}
+.folder-tab .u-badge{min-width:16px;height:16px;font-size:10px}
+
+.chat-row{
+  display:flex;gap:12px;padding:10px 10px;border-radius:10px;cursor:pointer;
+  transition:var(--t);align-items:center;
+}
+.chat-row:hover{background:var(--bg-2)}
+.chat-row.is-active{background:var(--bg-3)}
+.chat-row .meta{flex:1;min-width:0}
+.chat-row .row-1{display:flex;align-items:center;gap:6px}
+.chat-row .name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.chat-row .time{font-size:11px;color:var(--text-mute);flex-shrink:0}
+.chat-row .row-2{display:flex;align-items:center;gap:8px;margin-top:2px}
+.chat-row .preview{font-size:13px;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.chat-row .row-2 .u-badge{flex-shrink:0}
+.chat-row.is-pinned .name::after{content:'\f08d';font-family:'Font Awesome 6 Free';font-weight:900;font-size:10px;color:var(--pin);margin-left:6px}
+
+.setting-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.setting-row:last-child{border-bottom:0}
+.setting-row .sn{font-size:14px;font-weight:500;margin-bottom:2px}
+.setting-row .sd{font-size:12px;color:var(--text-dim)}
+.setting-row .smain{flex:1}
+
+.msg{display:flex;gap:12px;max-width:720px}
+.msg.is-mine{margin-left:auto;flex-direction:row-reverse}
+.msg-body{min-width:0;flex:1}
+.msg-head{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+.msg-author{font-weight:600;font-size:13px;color:#c7baff}
+.msg-time{font-size:11px;color:var(--text-mute)}
+.msg-bubble{
+  display:inline-block;padding:8px 12px;border-radius:14px;background:var(--bg-2);border:1px solid var(--line);
+  font-size:14px;line-height:1.5;max-width:100%;word-wrap:break-word;
+}
+.msg.is-mine .msg-bubble{background:var(--accent-soft);border-color:transparent;color:#e8e2ff}
+.msg.is-mine .msg-author{color:#c7baff}
+.msg-reply{
+  display:flex;gap:8px;padding:6px 10px;background:rgba(255,255,255,.03);border-radius:8px;
+  border-left:3px solid var(--accent);margin-bottom:6px;font-size:12px;
+}
+.msg-reply .ra{color:var(--accent);font-weight:600}
+.msg-reply .rt{color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:240px}
+.msg-reactions{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap}
+.reaction{
+  display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;
+  background:var(--bg-3);border:1px solid var(--line);font-size:12px;cursor:pointer;transition:var(--t);
+}
+.reaction:hover{border-color:var(--line-2)}
+.reaction.is-mine{background:var(--accent-soft);border-color:transparent;color:#c7baff}
+.msg-status{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--text-mute);margin-left:6px}
+.msg-status.is-read{color:var(--accent-2)}
+.mention{color:var(--accent-2);font-weight:500;background:rgba(91,140,255,.1);padding:0 4px;border-radius:4px}

@@ -1,0 +1,45 @@
+/* Message attachments — messenger-design mockup */
+
+.att-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:6px;
+  margin-top:6px;
+  max-width:420px;
+}
+.att-image{
+  border-radius:10px;overflow:hidden;background:var(--bg-3);aspect-ratio:4/3;
+  display:flex;align-items:center;justify-content:center;color:var(--text-mute);position:relative;cursor:pointer;
+  background-image:linear-gradient(135deg,#2a3146,#1a1f2e);
+}
+.att-image i{font-size:22px}
+.att-video{
+  position:relative;border-radius:10px;overflow:hidden;background:#000;aspect-ratio:16/9;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+.att-video::after{
+  content:'';
+  position:absolute;inset:0;
+  background:radial-gradient(circle at center,transparent 0,rgba(0,0,0,.4) 70%);
+}
+.att-video .play{
+  position:relative;z-index:1;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.9);color:#000;display:flex;align-items:center;justify-content:center;
+}
+.att-audio{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg-3);
+  border-radius:10px;border:1px solid var(--line);min-width:260px;
+}
+.att-audio .wave{flex:1;display:flex;align-items:center;gap:2px;height:24px}
+.att-audio .wave span{flex:1;background:var(--line-2);border-radius:2px}
+.att-file{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--bg-3);
+  border-radius:10px;border:1px solid var(--line);min-width:260px;
+}
+.att-file .icn{
+  width:36px;height:36px;border-radius:8px;background:var(--accent-soft);color:#c7baff;
+  display:flex;align-items:center;justify-content:center;
+}
+.att-file .fmeta{flex:1;min-width:0}
+.att-file .fname{font-weight:500;font-size:13px}
+.att-file .fsize{font-size:11px;color:var(--text-mute)}

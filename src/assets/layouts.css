@@ -1,0 +1,79 @@
+/* Layout & page chrome from messenger-design mockup (.main, .messages, .right, auth, page column) */
+
+.main{display:flex;flex-direction:column;min-width:0;background:var(--bg)}
+
+.pinned-bar{
+  display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--bg-1);
+  border-bottom:1px solid var(--line);font-size:13px;
+}
+.pinned-bar .bar{width:3px;height:32px;background:var(--accent);border-radius:2px}
+.pinned-bar .pmeta{flex:1;min-width:0}
+.pinned-bar .pmeta .l{color:var(--accent);font-size:11px;font-weight:600}
+.pinned-bar .pmeta .t{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text-dim)}
+
+.messages{flex:1;overflow-y:auto;padding:16px 24px;display:flex;flex-direction:column;gap:14px}
+.day-sep{display:flex;align-items:center;gap:12px;margin:8px 0}
+.day-sep::before,.day-sep::after{content:'';flex:1;height:1px;background:var(--line)}
+.day-sep span{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.08em}
+
+.right{
+  background:var(--bg-1);border-left:1px solid var(--line);
+  display:flex;flex-direction:column;min-width:0;overflow:hidden;
+}
+.right-head{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.right-tabs{display:flex;padding:0 12px;border-bottom:1px solid var(--line);gap:4px}
+.right-tab{padding:10px 12px;font-size:12px;font-weight:500;color:var(--text-dim);border-bottom:2px solid transparent;transition:var(--t)}
+.right-tab.is-active{color:var(--text);border-bottom-color:var(--accent)}
+.right-tab:hover{color:var(--text)}
+.right-body{flex:1;overflow-y:auto;padding:16px}
+
+.empty{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:40px;color:var(--text-dim);gap:12px;
+}
+.empty .ei{
+  width:80px;height:80px;border-radius:20px;background:var(--bg-1);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;color:var(--text-mute);font-size:30px;margin-bottom:6px;
+}
+.empty h3{margin:0;color:var(--text);font-size:18px;font-weight:600}
+.empty p{margin:0;max-width:380px;line-height:1.6}
+
+.auth-shell{
+  height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;overflow-y:auto;
+  background:
+    radial-gradient(ellipse at top left,rgba(124,92,255,.12),transparent 50%),
+    radial-gradient(ellipse at bottom right,rgba(91,140,255,.1),transparent 50%),
+    var(--bg);
+}
+.auth-card{
+  width:420px;max-width:100%;background:var(--bg-1);border:1px solid var(--line);
+  border-radius:18px;padding:32px;box-shadow:var(--shadow-2);
+}
+.auth-card .brand{display:flex;align-items:center;gap:10px;margin-bottom:24px}
+.auth-card .brand .b-logo{
+  width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;
+}
+.auth-card .brand .b-name{font-weight:700;font-size:17px}
+.auth-card h2{font-size:22px;margin:0 0 4px;font-weight:700;letter-spacing:-.01em}
+.auth-card .lede{color:var(--text-dim);font-size:14px;margin:0 0 24px}
+.auth-form{display:flex;flex-direction:column;gap:14px}
+.auth-foot{margin-top:18px;padding-top:18px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--text-dim)}
+.auth-foot a{color:#c7baff;font-weight:500}
+.code-input{display:flex;gap:8px;justify-content:center}
+.code-input input{
+  width:48px;height:56px;text-align:center;font-size:22px;font-weight:600;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:10px;color:var(--text);
+}
+.code-input input:focus{border-color:var(--accent)}
+
+.page-shell > *{min-height:0;min-width:0}
+.page-sidebar{background:var(--bg-1);border-right:1px solid var(--line);padding:18px 12px;overflow-y:auto;min-height:0}
+.page-sidebar h4{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.08em;margin:14px 8px 8px}
+.page-sidebar a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;font-size:13px;color:var(--text-dim);transition:var(--t)}
+.page-sidebar a:hover{background:var(--bg-2);color:var(--text)}
+.page-sidebar a.is-active{background:var(--bg-3);color:var(--text)}
+.page-main{overflow-y:auto;background:var(--bg);min-height:0}
+.page-head{padding:24px 32px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px}
+.page-head h1{font-size:22px;font-weight:700;margin:0;flex:1}
+.page-body{padding:32px;max-width:920px;margin:0 auto}

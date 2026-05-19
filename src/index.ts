@@ -1,0 +1,77 @@
+/**
+ * Nexus UI — Vue 3 presentation library entry.
+ * Components and tokens will be exported from here as they land.
+ */
+
+import "./assets/base.css";
+import "./assets/utilities.css";
+import "./assets/molecules.css";
+import "./assets/attachments.css";
+import "./assets/organisms.css";
+import "./assets/layouts.css";
+import "./assets/welcome.css";
+import "./assets/overlays.css";
+import "./assets/forum.css";
+import "./assets/kanban.css";
+import "./assets/panels-info.css";
+import "./assets/settings.css";
+import "./assets/skeleton.css";
+import "./assets/members.css";
+
+export { default as NxAppShell } from "./components/layouts/NxAppShell.vue";
+export { default as NxAttachmentFile } from "./components/molecules/NxAttachmentFile.vue";
+export { default as NxAuthCard } from "./components/layouts/NxAuthCard.vue";
+export { default as NxAuthShell } from "./components/layouts/NxAuthShell.vue";
+export { default as NxAvatar } from "./components/atoms/NxAvatar.vue";
+export { default as NxBadge } from "./components/atoms/NxBadge.vue";
+export { default as NxButton } from "./components/atoms/NxButton.vue";
+export { default as NxChatHeader } from "./components/organisms/NxChatHeader.vue";
+export { default as NxChatRow } from "./components/molecules/NxChatRow.vue";
+export { default as NxComposer } from "./components/organisms/NxComposer.vue";
+export { default as NxContextMenu } from "./components/overlays/NxContextMenu.vue";
+export { default as NxContextMenuItem } from "./components/overlays/NxContextMenuItem.vue";
+export { default as NxDaySeparator } from "./components/atoms/NxDaySeparator.vue";
+export { default as NxEmpty } from "./components/molecules/NxEmpty.vue";
+export { default as NxFolderTab } from "./components/molecules/NxFolderTab.vue";
+export { default as NxForumBoard } from "./components/forum/NxForumBoard.vue";
+export { default as NxForumGrid } from "./components/forum/NxForumGrid.vue";
+export { default as NxForumPane } from "./components/forum/NxForumPane.vue";
+export { default as NxForumRail } from "./components/forum/NxForumRail.vue";
+export { default as NxIcon } from "./components/atoms/NxIcon.vue";
+export { default as NxInfoRow } from "./components/panels/NxInfoRow.vue";
+export { default as NxInfoSection } from "./components/panels/NxInfoSection.vue";
+export { default as NxInput } from "./components/atoms/NxInput.vue";
+export { default as NxKanban } from "./components/kanban/NxKanban.vue";
+export { default as NxKanbanCard } from "./components/kanban/NxKanbanCard.vue";
+export { default as NxKanbanColumn } from "./components/kanban/NxKanbanColumn.vue";
+export { default as NxMain } from "./components/layouts/NxMain.vue";
+export { default as NxMemberRow } from "./components/members/NxMemberRow.vue";
+export { default as NxMessageBubble } from "./components/molecules/NxMessageBubble.vue";
+export { default as NxMessages } from "./components/layouts/NxMessages.vue";
+export { default as NxModal } from "./components/overlays/NxModal.vue";
+export { default as NxModalBackdrop } from "./components/overlays/NxModalBackdrop.vue";
+export { default as NxPageShell } from "./components/layouts/NxPageShell.vue";
+export { default as NxPinnedBar } from "./components/layouts/NxPinnedBar.vue";
+export { default as NxPill } from "./components/atoms/NxPill.vue";
+export { default as NxPostCard } from "./components/forum/NxPostCard.vue";
+export { default as NxRail } from "./components/organisms/NxRail.vue";
+export { default as NxReaction } from "./components/atoms/NxReaction.vue";
+export { default as NxRightPanel } from "./components/layouts/NxRightPanel.vue";
+export { default as NxRightPanelTab } from "./components/panels/NxRightPanelTab.vue";
+export { default as NxRouteBar } from "./components/overlays/NxRouteBar.vue";
+export { default as NxSessionRow } from "./components/settings/NxSessionRow.vue";
+export { default as NxSettingRow } from "./components/molecules/NxSettingRow.vue";
+export { default as NxSidebar } from "./components/organisms/NxSidebar.vue";
+export { default as NxSkeleton } from "./components/feedback/NxSkeleton.vue";
+export { default as NxThemeCard } from "./components/settings/NxThemeCard.vue";
+export { default as NxThemeGrid } from "./components/settings/NxThemeGrid.vue";
+export { default as NxToast } from "./components/overlays/NxToast.vue";
+export { default as NxToastStack } from "./components/overlays/NxToastStack.vue";
+export { default as NxToggle } from "./components/settings/NxToggle.vue";
+export { default as NxTopicRow } from "./components/forum/NxTopicRow.vue";
+export { default as NxTypingBar } from "./components/layouts/NxTypingBar.vue";
+export { default as NxWelcomeFoot } from "./components/welcome/NxWelcomeFoot.vue";
+export { default as NxWelcomeGrid } from "./components/welcome/NxWelcomeGrid.vue";
+export { default as NxWelcomeHero } from "./components/welcome/NxWelcomeHero.vue";
+export { default as NxWelcomeNav } from "./components/welcome/NxWelcomeNav.vue";
+export { default as NxWelcomeShell } from "./components/welcome/NxWelcomeShell.vue";

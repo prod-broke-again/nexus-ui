@@ -1,0 +1,8 @@
+/* Info sections (right panel details) — messenger-design mockup */
+
+.info-section{margin-bottom:24px}
+.info-section h4{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.08em;margin:0 0 10px}
+.info-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.info-row:last-child{border-bottom:0}
+.info-row .lbl{font-size:13px;color:var(--text-dim);flex:1}
+.info-row .val{font-size:13px;font-weight:500}

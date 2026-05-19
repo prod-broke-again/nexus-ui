@@ -1,0 +1,21 @@
+/* Settings / sessions / theme picker — messenger-design mockup (.setting-row lives in molecules.css) */
+
+.toggle{position:relative;width:40px;height:22px;border-radius:11px;background:var(--bg-4);transition:var(--t);cursor:pointer;flex-shrink:0}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:18px;height:18px;background:#fff;border-radius:50%;transition:var(--t)}
+.toggle.is-on{background:var(--accent)}
+.toggle.is-on::after{left:20px}
+
+.session-row{
+  display:flex;align-items:center;gap:14px;padding:14px;background:var(--bg-1);border:1px solid var(--line);
+  border-radius:12px;margin-bottom:10px;
+}
+.session-row .si{width:40px;height:40px;border-radius:10px;background:var(--bg-3);color:var(--text-dim);display:flex;align-items:center;justify-content:center}
+.session-row.is-current{border-color:rgba(52,211,153,.4)}
+
+.theme-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.theme-card{
+  border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;transition:var(--t);
+}
+.theme-card.is-active{border-color:var(--accent)}
+.theme-card .tp{height:80px;border-radius:8px;margin-bottom:8px}
+.theme-card .tn{font-size:13px;font-weight:500;text-align:center}

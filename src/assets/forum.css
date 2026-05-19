@@ -1,0 +1,39 @@
+/* Forum / topics chrome — messenger-design mockup */
+
+.forum-pane{
+  display:grid;grid-template-columns:200px 1fr;height:100%;
+}
+.forum-pane > *{min-height:0;min-width:0}
+.forum-rail{
+  background:var(--bg-1);border-right:1px solid var(--line);padding:12px 8px;overflow-y:auto;
+}
+.forum-rail .frh{font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:.06em;padding:6px 8px;display:flex;align-items:center;justify-content:space-between}
+.topic-row{
+  display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;transition:var(--t);
+  font-size:13px;
+}
+.topic-row:hover{background:var(--bg-2)}
+.topic-row.is-active{background:var(--bg-3)}
+.topic-row .ti{width:24px;height:24px;border-radius:6px;background:var(--accent-soft);color:#c7baff;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+.topic-row .tn{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.forum-board{padding:20px 24px;overflow-y:auto;background:var(--bg)}
+.forum-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:14px}
+.post-card{
+  background:var(--bg-1);border:1px solid var(--line);border-radius:12px;padding:14px;cursor:pointer;transition:var(--t);
+}
+.post-card:hover{border-color:var(--line-2);transform:translateY(-1px)}
+.post-card .pt{font-weight:600;font-size:14px;margin-bottom:6px}
+.post-card .pd{font-size:13px;color:var(--text-dim);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.post-card .pf{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12px;color:var(--text-mute)}
+.post-card .pf .upv{display:inline-flex;align-items:center;gap:4px;color:var(--text-dim)}
+.tag-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.tag-chip{
+  display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:6px;
+  font-size:11px;background:var(--bg-3);color:var(--text-dim);border:1px solid var(--line);
+}
+
+@media (max-width: 900px){
+  .forum-pane{grid-template-columns:1fr}
+  .forum-rail{display:none}
+}

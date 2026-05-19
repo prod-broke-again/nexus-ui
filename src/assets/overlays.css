@@ -1,0 +1,55 @@
+/* Modal, context menu, toasts, route bar — messenger-design mockup */
+
+.modal-backdrop{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:center;z-index:100;
+  animation:fadeIn .2s ease;
+}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes nx-slide-up{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal{
+  background:var(--bg-1);border:1px solid var(--line);border-radius:16px;
+  width:520px;max-width:calc(100% - 32px);max-height:calc(100% - 32px);overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:var(--shadow-2);
+  animation:nx-slide-up .25s cubic-bezier(.4,0,.2,1);
+}
+.modal.is-lg{width:720px}
+.modal-head{padding:18px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.modal-head h3{margin:0;font-size:16px;font-weight:600;flex:1}
+.modal-body{padding:20px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:14px}
+.modal-foot{padding:14px 20px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}
+
+.ctx-menu{
+  position:absolute;background:var(--bg-2);border:1px solid var(--line);border-radius:10px;
+  padding:6px;min-width:200px;z-index:200;box-shadow:var(--shadow-1);
+  animation:nx-slide-up .15s ease;
+}
+.ctx-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;cursor:pointer;font-size:13px;transition:var(--t)}
+.ctx-item:hover{background:var(--bg-3)}
+.ctx-item.is-danger{color:#ff96a4}
+.ctx-item.is-danger:hover{background:rgba(239,90,111,.1)}
+
+.toasts{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:8px;z-index:300}
+.toast{
+  background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:12px 16px;
+  display:flex;align-items:center;gap:10px;min-width:280px;box-shadow:var(--shadow-1);
+  animation:nx-slide-up .25s ease;
+}
+.toast.is-ok{border-left:3px solid var(--ok)}
+.toast.is-err{border-left:3px solid var(--err)}
+.toast.is-info{border-left:3px solid var(--accent)}
+
+.hidden{display:none !important}
+
+.route-bar{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:50;
+  display:flex;gap:4px;background:var(--bg-2);border:1px solid var(--line);
+  border-radius:14px;padding:6px;box-shadow:var(--shadow-2);
+  max-width:calc(100vw - 32px);overflow-x:auto;
+}
+.route-bar::-webkit-scrollbar{display:none}
+.route-bar button{
+  padding:8px 14px;border-radius:9px;font-size:12px;font-weight:500;color:var(--text-dim);transition:var(--t);white-space:nowrap;
+}
+.route-bar button:hover{color:var(--text);background:var(--bg-3)}
+.route-bar button.is-active{background:var(--accent);color:#fff}
